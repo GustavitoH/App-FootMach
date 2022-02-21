@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <div>
+      <ion-buttons>
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Agregar Equipo</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img [src]="img"></ion-img>
+  </ion-card>
+  <form #equipoForm="ngForm" (ngSubmit)="insertar(equipoForm)">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="9">
+          <ion-item >
+            <ion-label position="floating">
+              <ion-icon name="shield-half-sharp"></ion-icon>
+              Escudo
+            </ion-label>
+            <ion-input type="text" name="escudo" (ionChange)="imagen($event)" [(ngModel)]="escudo">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="9">
+          <ion-item >
+            <ion-label position="floating">
+              <ion-icon name="person-circle-outline"></ion-icon>
+              Equipo
+            </ion-label>
+            <ion-input type="text" name="nombre" [(ngModel)]="nombre">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="9">
+          <ion-item >
+            <ion-label position="floating">
+              <ion-icon name="flag-sharp"></ion-icon>
+              Pais
+            </ion-label>
+            <ion-input type="text" name="pais" [(ngModel)]="pais">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6">
+          <ion-button expand="block" strong=true (click)="insertar(equipoForm)">AGREGAR 
+            <ion-icon name="arrow-forward-sharp"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

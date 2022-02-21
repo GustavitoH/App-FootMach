@@ -1,0 +1,47 @@
+ion-content {
+  ion-slide{
+    ion-avatar {
+      padding: 0.2rem;
+      background: linear-gradient(124deg, rgba(37,149,241,1) 0%, rgba(36,252,124,1) 100%);
+    }
+    .goleadores {
+      padding: 0.5rem;
+      justify-content: end;
+    }
+  }
+  ion-item {
+    margin: 1rem;
+    border-radius: 2rem;
+    border: 0.2rem solid rgb(235, 235, 235);
+    p, small, ion-col{
+      margin: 0rem;
+      padding: 0rem;
+    }
+    ion-img {
+      width: 8rem;
+      height: 8rem;
+    }
+    ion-row {
+      margin: 1rem 0rem;
+      .vs {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .segment-partidos {
+    ion-item {
+      margin: 0rem;
+      border: none;
+      ion-img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      ion-label {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

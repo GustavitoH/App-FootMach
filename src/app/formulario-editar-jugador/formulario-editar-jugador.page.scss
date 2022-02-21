@@ -1,0 +1,10 @@
+ion-toolbar {
+  --background: black;
+  div {
+    display: flex;
+  }
+  ion-title {
+    color: #fff;
+    font-weight: bold;
+  }
+}

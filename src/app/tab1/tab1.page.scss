@@ -1,0 +1,20 @@
+ion-toolbar {
+  ion-title {
+    font-weight: bold;
+  }
+}
+ion-content {
+  .content-title {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    ion-searchbar {
+        --border-radius: 1rem;
+        --background: rgb(243, 243, 243);
+        color: rgb(0, 0, 0);
+    }
+  }
+  ion-item {
+    .items {
+      margin: 1rem 2rem 1rem 1rem;
+    }
+  }
+}

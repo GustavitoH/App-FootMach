@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <div>
+      <ion-buttons>
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{nombre}} {{apellido}}</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="content-perfil">
+    <ion-avatar>
+      <ion-img [src]="foto"></ion-img>
+    </ion-avatar>
+  </div>
+  <div class="content-info">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="col-tit" size="5">
+          Nombre
+        </ion-col>
+        <ion-col size="5">
+          {{nombre}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="col-tit" size="5">
+          Apellido
+        </ion-col>
+        <ion-col size="5">   
+          {{apellido}}    
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="col-tit" size="5">
+          Número
+        </ion-col>
+        <ion-col size="5">
+          {{numero}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="col-tit" size="5">
+          Goles
+        </ion-col>
+        <ion-col size="5">
+          {{goles}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="col-tit" size="5">
+          Edad
+        </ion-col>
+        <ion-col size="5">
+          {{edad}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="col-tit" size="5">
+          Equipo
+        </ion-col>
+        <ion-col class="col-img" size="5">
+          <ion-avatar>
+            <ion-img [src]="escudo"></ion-img>
+            <ion-label>
+              {{nombrequipo}}
+            </ion-label>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

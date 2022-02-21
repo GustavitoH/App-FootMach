@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <div>
+      <ion-buttons>
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Agregar Partido</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #partidoForm="ngForm" (ngSubmit)="insertar(partidoForm)">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="9">
+          <ion-item >
+            <ion-select placeholder="Local" name="local" [(ngModel)]="local">
+              <ion-select-option *ngFor="let item of lista" [value]="item._id">{{item.nombre}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="9">
+          <ion-item >
+            <ion-select placeholder="Visitante" name="visitante" [(ngModel)]="visitante">
+              <ion-select-option *ngFor="let item of lista" [value]="item._id">{{item.nombre}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="9">
+          <ion-item >
+            <ion-label position="floating">
+              <ion-icon name="calendar-sharp"></ion-icon>
+              Fecha
+            </ion-label>
+            <ion-input type="date" name="dia" [(ngModel)]="dia">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="9">
+          <ion-item >
+            <ion-select placeholder="Hora" name="hora" [(ngModel)]="hora">
+              <ion-select-option *ngFor="let item of horas" [value]="item">{{item}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="9">
+          <ion-item >
+            <ion-label position="floating">
+              <ion-icon name="location-sharp"></ion-icon>
+              Estadio
+            </ion-label>
+            <ion-input type="text" name="estadio" [(ngModel)]="estadio">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6">
+          <ion-button expand="block" strong=true (click)="insertar(partidoForm)">AGREGAR 
+            <ion-icon name="arrow-forward-sharp"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
